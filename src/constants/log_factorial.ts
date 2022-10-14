@@ -1,3 +1,4 @@
+// Wrote this for gamma. Don't touch for now.
 export default [
   0,
   0,
