@@ -7,3 +7,6 @@ where `n` is the order of the curve. The curve starts at the first point
 and ends at the last point while almost never passing through the
 intermediate control points. The intermediate points instead control
 the direction of the curve.
+
+Functions under this module generate an array of points that would form a
+bezier curve when connected.

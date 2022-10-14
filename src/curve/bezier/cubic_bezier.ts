@@ -1,4 +1,4 @@
-import uniformDistribution from "../../distribution/uniform.ts";
+import { uniformRange } from "../../random/uniform_range.ts";
 
 /**
  * Cubic bezier is a curve defined by four points P0, P1, P2, P3.
@@ -11,12 +11,12 @@ import uniformDistribution from "../../distribution/uniform.ts";
  * @param coordinates Coordinates in the order p1.x, p1.y, p2.x, p2.y.
  * @returns Array of num_points points of the cubic bezier curve.
  */
-export default function cubicBezier(
+export function cubicBezier(
   num_points: number,
   ...coordinates: [number, number, number, number]
 ): [number, number][] {
   const curve: [number, number][] = [];
-  const increment = uniformDistribution(num_points)[1];
+  const increment = uniformRange(num_points)[1];
   let t = 0;
   do {
     curve.push([
