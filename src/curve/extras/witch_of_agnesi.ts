@@ -1,11 +1,11 @@
-import uniformDistribution from "../../distribution/uniform.ts";
+import { uniformRange } from "../../random/uniform_range.ts";
 
 export default function witchOfAgnesi(
   num_points = 100,
     radius = 0.5,
 ): [number, number][] {
   if (radius > 1) radius = 0.5;
-  const res: [number, number][] = Array.from(uniformDistribution(num_points, -1, 1))
+  const res: [number, number][] = Array.from(uniformRange(num_points, -1, 1))
     .map((t) => [t, t]);
   let i = 0;
   while (i < num_points) {
