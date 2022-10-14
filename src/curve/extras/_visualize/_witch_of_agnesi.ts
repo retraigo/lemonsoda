@@ -1,7 +1,8 @@
-import { np, plt, sns, NamedArgument } from "../../../../visualize/python.ts";
+import { np, plt } from "../../../../visualize/python.ts";
 import witchOfAgnesi from "../witch_of_agnesi.ts";
 const d = witchOfAgnesi(100, 0.5);
-const data = [...d.slice().reverse().map(x => [-x[0], x[1]]), ...d]
+
+//const data = [...d.slice().reverse().map(x => [-x[0], x[1]]), ...d]
 plt.plot(d.map((x) => x[0]), d.map((x) => x[1]));
 
 

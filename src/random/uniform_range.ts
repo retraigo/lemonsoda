@@ -8,7 +8,6 @@
   const res = new Array(n);
   let i = 0;
   const increment = (max - min) / (n - 1);
-  console.log(increment)
   while (i < (n)) {
     res[i] = min + i * increment;
     i += 1;
