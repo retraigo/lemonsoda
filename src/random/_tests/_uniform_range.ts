@@ -1,5 +1,5 @@
 import { uniformRange } from "../uniform_range.ts";
-import { dict, np, plt, sns } from "../../../visualize/python.ts";
+import { np, plt } from "../../../visualize/python.ts";
 
 const rand = new Array(100);
 
