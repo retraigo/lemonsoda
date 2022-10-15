@@ -49,8 +49,8 @@ const linregress = Deno.dlopen(
 
 const lin = linregress.symbols;
 
-const x = uniformRange(1e4, 17, 0.087);
-const y = uniformRange(1e4, 765, 0.0698);
+const x = uniformRange(1e7, 17, 0.087);
+const y = uniformRange(1e7, 765, 0.0698);
 
 const data_x = Float32Array.from(x);
 const data_y = Float32Array.from(y);
@@ -90,6 +90,7 @@ Deno.bench({
 Deno.bench({
   name: "Rust FFI",
   baseline: true,
+  group: "linregress",
   fn() {
     const ptr = lin.linear_regression(
       x_for_ffi,
@@ -105,6 +106,7 @@ Deno.bench({
 
 Deno.bench({
   name: "Deno",
+  group: "linregress",
   //  ignore: true,
   fn() {
     const res = linearRegression(x, y);
