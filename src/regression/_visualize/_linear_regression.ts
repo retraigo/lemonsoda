@@ -23,5 +23,5 @@ plt.plot(
 );
 
 console.log(reg);
-console.log(reg.predict(27.72));
+console.log(reg.predict(13.02));
 plt.show();

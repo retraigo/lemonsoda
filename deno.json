@@ -1,0 +1,5 @@
+{
+  "tasks": {
+    "compile": "rustc -C opt-level=3 -C debuginfo=0 --crate-type=cdylib --target=x86_64-unknown-linux-gnu native/math/linear_regression.rs -o dylibs/liblinear_regression.so"
+  }
+}
