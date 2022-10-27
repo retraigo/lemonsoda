@@ -1,4 +1,4 @@
-import cubicBezier from "../cubic_bezier.ts";
+import {cubicBezier} from "../cubic_bezier.ts";
 import linearBezier from "../linear_bezier.ts";
 
 import { np, plt, sns } from "../../../../visualize/python.ts";
